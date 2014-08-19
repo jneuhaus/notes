@@ -1,261 +1,220 @@
-Welcome to StackEdit!		{#welcome}
-====================
-
-
-Hello, I am your first Markdown document within **StackEdit**[^stackedit]. Don't delete me, I can be helpful. I can be recovered anyway in the `Utils` tab of the <i class="icon-cog"></i> `Settings` dialog.
-
-----------
-
-
-Documents
---------------
-
-**StackEdit** stores your documents in your browser, which means all your documents are automatically saved locally and are accessible **offline!**
-
-> **Note:**
-
-> - StackEdit is accessible offline after the application has been loaded for the first time.
-> - Your local documents are not shared between different browsers or computers.
-> - Clearing your browser's data may **delete all your local documents!** Make sure your documents are backed up using **Google Drive** or **Dropbox** synchronization (see [<i class="icon-refresh"></i> Synchronization](#synchronization) section).
-
-#### <i class="icon-file"></i> Create a document
-
-The document panel is accessible using  <i class="icon-folder-open"></i> button in the navigation bar. You can create a new document by clicking the <i class="icon-file"></i> `New document` sub-menu in the document panel.
-
-#### <i class="icon-folder-open"></i> Switch to another document
-
-All your local documents are listed in the document panel. You can switch from one to another by clicking a document in the document panel or you can also use <kbd>Ctrl+[</kbd> and <kbd>Ctrl+]</kbd> to toggle documents by most recently used.
-
-#### <i class="icon-pencil"></i> Rename a document
-
-You can rename the current document by clicking the document title in the navigation bar.
-
-#### <i class="icon-trash"></i> Delete a document
-
-You can delete the current document by clicking the <i class="icon-trash"></i> `Delete document` sub-menu in the document panel.
-
-#### <i class="icon-hdd"></i> Export a document
-
-You can save the current document to a file using the <i class="icon-hdd"></i> `Export to disk` sub-menu from the <i class="icon-provider-stackedit"></i> menu panel.
-
-> **Tip:** See [<i class="icon-upload"></i> Publish a document](#publish-a-document) section for a description of the different output formats.
-
-
-----------
-
-
-Synchronization
---------------------
-
-**StackEdit** can be combined with <i class="icon-provider-gdrive"></i> **Google Drive** and <i class="icon-provider-dropbox"></i> **Dropbox** to have your documents centralized in the *Cloud*. The synchronization mechanism will take care of uploading your modifications or downloading the latest version of your documents.
-
-> **Note:**
-
-> - Full access to **Google Drive** or **Dropbox** is required to be able to import any document in StackEdit. Permission restrictions can be configured in the settings.
-> - Imported documents are downloaded in your browser and are not transmitted to a server.
-> - If you experience problems saving your documents on Google Drive, check and optionally disable browser extensions, such as Disconnect.
-
-#### <i class="icon-refresh"></i> Open a document
-
-You can open a document from <i class="icon-provider-gdrive"></i> **Google Drive** or the <i class="icon-provider-dropbox"></i> **Dropbox** by opening the <i class="icon-refresh"></i> `Synchronize` sub-menu and by clicking `Open from...`. Once opened, any modification in your document will be automatically synchronized with the **Google Drive** / **Dropbox** file.
-
-#### <i class="icon-refresh"></i> Save a document
-
-You can save any document by opening the <i class="icon-refresh"></i> `Synchronize` sub-menu and by clicking `Save on...`. Even if your document is already synchronized with **Google Drive** or **Dropbox**, you can export it to a another location. **StackEdit** can synchronize one document with multiple locations.
-
-#### <i class="icon-refresh"></i> Synchronize a document
-
-Once your document is linked to a <i class="icon-provider-gdrive"></i> **Google Drive** or a <i class="icon-provider-dropbox"></i> **Dropbox** file, **StackEdit** will periodically (every 3 minutes) synchronize it by downloading/uploading any modification. Any conflict will be detected, and a local copy of your document will be created as a backup if necessary.
-
-If you just have modified your document and you want to force the synchronization, click the <i class="icon-refresh"></i> button in the navigation bar.
-
-> **Note:** The <i class="icon-refresh"></i> button is disabled when you have no document to synchronize.
-
-#### <i class="icon-refresh"></i> Manage document synchronization
-
-Since one document can be synchronized with multiple locations, you can list and manage synchronized locations by clicking <i class="icon-refresh"></i> `Manage synchronization` in the <i class="icon-refresh"></i> `Synchronize` sub-menu. This will let you remove synchronization locations that are associated to your document.
-
-> **Note:** If you delete the file from **Google Drive** or from **Dropbox**, the document will no longer be synchronized with that location.
-
-----------
-
-
-Publication
---------------
-
-Once you are happy with your document, you can publish it on different websites directly from **StackEdit**. As for now, **StackEdit** can publish on **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **Tumblr**, **WordPress** and on any SSH server.
-
-#### <i class="icon-upload"></i> Publish a document
-
-You can publish your document by opening the <i class="icon-upload"></i> `Publish` sub-menu and by choosing a website. In the dialog box, you can choose the publication format:
-
-- Markdown, to publish the Markdown text on a website that can interpret it (**GitHub** for example),
-- HTML, to publish the document converted into HTML (on a blog for example),
-- Template, to have a full control of the output.
-
-> **Note:** The default template is a simple webpage wrapping your document in HTML format. You can customize it in the `Advanced` tab of the <i class="icon-cog"></i> `Settings` dialog.
-
-#### <i class="icon-upload"></i> Update a publication
-
-After publishing, **StackEdit** will keep your document linked to that publication which makes it easy for you to update it. Once you have modified your document and you want to update your publication, click on the <i class="icon-upload"></i> button in the navigation bar.
-
-> **Note:** The <i class="icon-upload"></i> button is disabled when your document has not been published yet.
-
-#### <i class="icon-upload"></i> Manage document publication
-
-Since one document can be published on multiple locations, you can list and manage publish locations by clicking <i class="icon-upload"></i> `Manage publication` in the <i class="icon-provider-stackedit"></i> menu. This will let you remove publication locations that are associated to your document.
-
-> **Note:** In some cases, if the file has been removed from the website or the blog, the document will no longer be published on that location.
-
-----------
-
-
-Markdown Extra
---------------------
-
-**StackEdit** supports **Markdown Extra**, which extends **Markdown** syntax with some nice features.
-
-> **Tip:** You can disable any **Markdown Extra** feature in the `Extensions` tab of the <i class="icon-cog"></i> `Settings` dialog.
-
-> **Note:** You can find more information about **Markdown** syntax [here][2] and **Markdown Extra** extension [here][3].
-
-
-### Tables
-
-**Markdown Extra** has a special syntax for tables:
-
-Item     | Value
--------- | ---
-Computer | $1600
-Phone    | $12
-Pipe     | $1
-
-You can specify column alignment with one or two colons:
-
-| Item     | Value | Qty   |
-| :------- | ----: | :---: |
-| Computer | $1600 |  5    |
-| Phone    | $12   |  12   |
-| Pipe     | $1    |  234  |
-
-
-### Definition Lists
-
-**Markdown Extra** has a special syntax for definition lists too:
-
-Term 1
-Term 2
-:   Definition A
-:   Definition B
-
-Term 3
-
-:   Definition C
-
-:   Definition D
-
-	> part of definition D
-
-
-### Fenced code blocks
-
-GitHub's fenced code blocks[^gfm] are also supported with **Prettify** syntax highlighting:
-
-```
-// Foo
-var bar = 0;
-```
-
-> **Tip:** To use **Highlight.js** instead of **Prettify**, just configure the `Markdown Extra` extension in the <i class="icon-cog"></i> `Settings` dialog.
-
-> **Note:** You can find more information:
-
-> - about **Prettify** syntax highlighting [here][5],
-> - about **Highlight.js** syntax highlighting [here][6].
-
-
-### Footnotes
-
-You can create footnotes like this[^footnote].
-
-  [^footnote]: Here is the *text* of the **footnote**.
-
-
-### SmartyPants
-
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
-
-|                  | ASCII                        | HTML              |
- ----------------- | ---------------------------- | ------------------
-| Single backticks | `'Isn't this fun?'`            | 'Isn't this fun?' |
-| Quotes           | `"Isn't this fun?"`            | "Isn't this fun?" |
-| Dashes           | `-- is en-dash, --- is em-dash` | -- is en-dash, --- is em-dash |
-
-
-### Table of contents
-
-You can insert a table of contents using the marker `[TOC]`:
-
-[TOC]
-
-
-### MathJax
-
-You can render *LaTeX* mathematical expressions using **MathJax**, as on [math.stackexchange.com][1]:
-
-The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
-> **Tip:** Make sure you include **MathJax** into your publications to render mathematical expression properly. Your page/template should include something like this:
-
-```
-<script type="text/javascript" src="https://stackedit.io/libs/MathJax/MathJax.js?config=TeX-AMS_HTML"></script>
-```
-
-> **Note:** You can find more information about **LaTeX** mathematical expressions [here][4].
-
-
-### UML diagrams
-
-You can also render sequence diagrams like this:
-
-```sequence
-Alice->Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob-->Alice: I am good thanks!
-```
-
-And flow charts like this:
-
-```flow
-st=>start: Start
-e=>end
-op=>operation: My Operation
-cond=>condition: Yes or No?
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-
-> **Note:** You can find more information:
-
-> - about **Sequence diagrams** syntax [here][7],
-> - about **Flow charts** syntax [here][8].
-
-  [^stackedit]: [StackEdit](https://stackedit.io/) is a full-featured, open-source Markdown editor based on PageDown, the Markdown library used by Stack Overflow and the other Stack Exchange sites.
-
-  [^gfm]: **GitHub Flavored Markdown** (GFM) is supported by StackEdit.
-
-
-  [1]: http://math.stackexchange.com/
-  [2]: http://daringfireball.net/projects/markdown/syntax "Markdown"
-  [3]: https://github.com/jmcmanus/pagedown-extra "Pagedown Extra"
-  [4]: http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference
-  [5]: https://code.google.com/p/google-code-prettify/
-  [6]: http://highlightjs.org/
-  [7]: http://bramp.github.io/js-sequence-diagrams/
-  [8]: http://adrai.github.io/flowchart.js/
+## Oracle Notes ##
+
+According to the Oracle Release Notes, The following packages (or later versions)
+must be installed on Red Hat Linux, so they were installed with yum as noted.
+
+    binutils-2.15.92.0.2-10.EL4 (already installed)
+    compat-db-4.1.25-9          (installed with "yum install compat-db")
+    control-center-2.8.0-12     (installed with "yum install control-center" -- see below)
+    gcc-3.4.3-9.EL4             (already installed)
+    gcc-c++-3.4.3-9.EL4         (already installed)
+    glibc-2.3.4-2               (already installed)
+    glibc-common-2.3.4-2        (already installed)
+    gnome-libs-1.4.1.2.90-44.1  (installed with "yum install gnome-libs" -- see below)
+    libstdc++-3.4.3-9.EL4       (already installed)
+    libstdc++-devel-3.4.3-9.EL4 (already installed)
+    make-3.80-5                 (already installed)
+    pdksh-5.2.14-30             (not installed)
+    sysstat-5.0.5-1             (installed with "yum install sysstat")
+    xscreensaver-4.18-5.rhel4.2 (not installed)
+    libaio-0.3.104-2            (installed with "yum install libaio")
+
+########################################################################
+Installation of the package "control-center" requires XWindows, which was not
+installed by default for the iWeb server, therefore, installing this package
+required the following packages to also be installed:
+#######################################################################
+
+     Package                 Arch       Version          Repository        Size
+    =============================================================================
+    Installing:
+     control-center          i386       1:2.10.1-6       base              2.2 M
+    Installing for dependencies:
+     GConf2                  i386       2.10.0-4         base              1.3 M
+     ORBit2                  i386       2.12.1-3         base              234 k
+     alsa-lib                i386       1.0.9rf-2.FC4    updates-released  361 k
+     at-spi                  i386       1.6.3-1          base              224 k
+     atk                     i386       1.9.1-1          base              178 k
+     audiofile               i386       1:0.2.6-2        base               98 k
+     cdrecord                i386       8:2.01.1-9.0.FC4.1  updates-released  573 k
+     chkfontpath             i386       1.10.0-4         base               13 k
+     desktop-backgrounds-basic  noarch     2.0-29           base              2.6 M
+     docbook-dtds            noarch     1.0-26           base              663 k
+     eel2                    i386       2.10.0-2         base              381 k
+     esound                  i386       1:0.2.36-0.fc4.1  updates-released  127 k
+     evolution-data-server   i386       1.2.3-3.fc4      updates-released  3.5 M
+     gail                    i386       1.8.3-2          base              325 k
+     gamin                   i386       0.1.1-3.FC4      updates-released  101 k
+     ghostscript             i386       7.07-41          updates-released  7.6 M
+     ghostscript-fonts       noarch     5.50-13          base              808 k
+     gnome-desktop           i386       2.10.0-5         base              650 k
+     gnome-icon-theme        noarch     2.10.1-4         base              3.0 M
+     gnome-keyring           i386       0.4.2-1          base              120 k
+     gnome-menus             i386       2.10.1-3         base               62 k
+     gnome-mime-data         i386       2.4.2-1          base              679 k
+     gnome-panel             i386       2.10.1-10.2      updates-released  2.7 M
+     gnome-vfs2              i386       2.10.0-5         base              1.1 M
+     gnome-vfs2-smb          i386       2.10.0-5         base               29 k
+     gtk2                    i386       2.6.10-2.fc4.4   updates-released  4.8 M
+     hicolor-icon-theme      noarch     0.8-2            base               24 k
+     howl                    i386       0.9.8-3          base              105 k
+     howl-libs               i386       0.9.8-3          base               85 k
+     intltool                i386       0.33-2           base              109 k
+     libIDL                  i386       0.8.5-2          base               77 k
+     libart_lgpl             i386       2.3.17-2         base               69 k
+     libbonobo               i386       2.8.1-1          base              436 k
+     libbonoboui             i386       2.8.1-4          base              356 k
+     libcroco                i386       0.6.0-5          base              113 k
+     libexif                 i386       0.6.12-3         base               97 k
+     libgail-gnome           i386       1.1.0-5          base               26 k
+     libglade2               i386       2.5.1-2          base               92 k
+     libgnome                i386       2.10.0-3         base              705 k
+     libgnomecanvas          i386       2.10.0-1         base              210 k
+     libgnomecups            i386       0.2.0-2          base               70 k
+     libgnomeprint22         i386       2.10.3-1         base              344 k
+     libgnomeprintui22       i386       2.10.1-1         base              268 k
+     libgnomeui              i386       2.10.0-1         base              848 k
+     libgsf                  i386       1.11.1-2         base               75 k
+     librsvg2                i386       2.9.5-2          base              150 k
+     libsoup                 i386       2.2.3-4.FC4      updates-released  121 k
+     libwnck                 i386       2.10.3-1         updates-released  151 k
+     libxklavier             i386       2.0-1            base               77 k
+     libxslt                 i386       1.1.14-2         base              469 k
+     metacity                i386       2.10.3-1         updates-released  1.9 M
+     mkisofs                 i386       8:2.01.1-9.0.FC4.1  updates-released  573 k
+     mozilla-nspr            i386       37:1.7.12-1.5.1  updates-released  111 k
+     mozilla-nss             i386       37:1.7.12-1.5.1  updates-released  684 k
+     nautilus                i386       2.10.0-4         base              3.7 M
+     nautilus-cd-burner      i386       2.10.0-2         base              256 k
+     openjade                i386       1.3.2-16         base              1.9 M
+     pango                   i386       1.8.1-2          base              272 k
+     redhat-artwork          i386       0.122-10         base              4.6 M
+     samba-common            i386       3.0.14a-2        base              5.7 M
+     scrollkeeper            i386       0.3.14-5         base              291 k
+     sgml-common             noarch     0.6.3-17         base               41 k
+     shared-mime-info        i386       0.16-3           base              133 k
+     startup-notification    i386       0.8-2            base               28 k
+     ttmkfdir                i386       3.0.9-16.1       updates-released   49 k
+     urw-fonts               noarch     2.3-1            base              4.5 M
+     xml-common              noarch     0.6.3-17         base              5.8 k
+     xorg-x11-font-utils     i386       6.8.2-37.FC4.49.2  updates-released  124 k
+     xorg-x11-xfs            i386       6.8.2-37.FC4.49.2  updates-released  141 k
+     xscreensaver-base       i386       1:4.21-4         base              724 k
+
+################################################################################
+Installation of the package "gnome-libs" required the following prerequisites
+to be intalled:
+################################################################################
+
+     Package                 Arch       Version          Repository        Size
+    =============================================================================
+    Installing:
+     gnome-libs              i386       1:1.4.1.2.90-46  base              1.0 M
+    Installing for dependencies:
+     ORBit                   i386       1:0.5.17-15      base              313 k
+     gdk-pixbuf              i386       1:0.22.0-18.fc4.2  updates-released  225 k
+     glib                    i386       1:1.2.10-16      base              130 k
+     gtk+                    i386       1:1.2.10-39      base              885 k
+     imlib                   i386       1:1.9.13-24      base              409 k
+     libpng10                i386       1.0.18-2         base              149 k
+     libungif                i386       4.1.3-3.fc4.2    updates-released   39 k
+
+################################################################################
+Installed xorg-x11 package, which is required for the Oracle Installer, and
+this package also required the following:
+################################################################################
+ Package                 Arch       Version          Repository        Size
+=============================================================================
+Installing:
+ xorg-x11                i386       6.8.2-37.FC4.49.2  updates-released   14 M
+Installing for dependencies:
+ fonts-xorg-base         noarch     6.8.2-1          base              7.3 M
+ xinitrc                 noarch     4.0.18.1-1       updates-released   28 k
+ xorg-x11-xauth          i386       6.8.2-37.FC4.49.2  updates-released  102 k
+ xterm                   i386       205-1.FC4        updates-released  175 k
+
+################################################################################
+According to http://www.puschitz.com/InstallingOracle10g.shtml the following
+packages must also be installed for Fedora Core 4.
+################################################################################
+ Package                 Arch       Version          Repository        Size
+=============================================================================
+Installing:
+ compat-libstdc++-33       i386       3.2.3-47.fc4       base              228 k
+ openmotif                 i386       2.2.3-10.FC4.1     updates-released  1.4 M
+ xorg-x11-deprecated-libs  i386       6.8.2-37.FC4.49.2  updates-released   88 k
+ openmotif21               i386       2.1.30-14          base              996 k
+
+################################################################################
+Updated Kernel parameters by modifying the file /etc/sysctl.conf per Oracle
+installation recommendations.
+################################################################################
+kernel.shmall = 2097152
+kernel.shmmax = 2147483648
+kernel.shmmni = 4096
+kernel.sem = 250 32000 100 128
+fs.file-max = 65536
+net.ipv4.ip_local_port_range = 1024 65000
+rmem_default = 262144
+rmem_max = 262144
+wmem_default = 262144
+wmem_max = 262144
+
+################################################################################
+Updated the file /etc/security/limits.conf according to Oracle recommendations
+by adding the following lines for the "oracle" user.
+################################################################################
+oracle           soft    nproc   2047
+oracle           hard    nproc   16384
+oracle           soft    nofile  1024
+oracle           hard    nofile  65536
+
+################################################################################
+After running the Oracle Universal Installer, the following are setup:
+################################################################################
+iSQL*Plus URL:       http://hd-t3333cl.privatedns.com:5560/isqlplus
+iSQL*Plus DBA URL:   http://hd-t3333cl.privatedns.com:5560/isqlplus/dba
+Enterprise Manager:  http://hd-t3333cl.privatedns.com:1158/em
+
+################################################################################
+To Start and Stop the Oracle Web-based Administration servers, as the oracle
+user, execute the following commands:
+################################################################################
+isqlplusctl stop | start
+emctl stop dbconsole | start dbconsole
+
+################################################################################
+Added user accounts to be members of the Oracle groups (/etc/group) so commands
+like sqlplus will work when logged into the system:
+################################################################################
+dba:x:11011:oracle,jboss,elindquist,blane,jkirkwood,sshadmin
+oinstall:x:11012:oracle,jboss,elindquist,blane,jkirkwood,sshadmin
+
+################################################################################
+modified $ORACLE_HOME/sqlplus/admin/glogin.sql (the sqlplus startup script
+added: DEFINE _EDITOR=vi
+
+################################################################################
+created PMP and PADOC tablespaces:
+create tablespace pmp datafile '/home/oracle/oracle/product/10.2.0/oradata/orcl/pmp01.dbf' size 2g
+create tablespace pmp datafile '/home/oracle/oracle/product/10.2.0/oradata/orcl/pmp02.dbf' size 2g
+create tablespace padoc datafile '/home/oracle/oracle/product/10.2.0/oradata/orcl/padoc01.dbf' size 100M
+
+################################################################################
+created PMP, PAWEB and PADOC users::
+
+create user pmp identified by ** default tablespace pmp temporary tablespace temp quota unlimited on pmp
+create user paweb identified by ** default tablespace pmp temporary tablespace temp quota unlimited on pmp
+create user padoc identified by ** default tablespace padoc temporary tablespace temp quota unlimited on padoc
+grant connect to pmp
+grant connect to paweb
+grant connect to padoc
+
+################################################################################
+created PMPUSER and PSTUSER but did NOT grant connect privilege
+these were "readonly" users that were granted SELECT privileges but not UPDATE
+they need to be created so the import process doesn't show a ton of error messages
+when it tries to grant the privileges:
+
+create user pmpuser identified by **
+create user pstuser identified by **
