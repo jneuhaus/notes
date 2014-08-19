@@ -1,4 +1,4 @@
-## Oracle Notes ##
+## Notes on Oracle 11g Installation ##
 
 According to the Oracle Release Notes, The following packages (or later versions)
 must be installed on Red Hat Linux, so they were installed with yum as noted.
