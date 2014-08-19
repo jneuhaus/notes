@@ -1,14 +1,26 @@
-## Notes on Oracle 12c Installation ##
-### These are helper notes for migration from 11g to 12c **[see 11g notes][1]** ###
+Notes on Oracle 12c Installation
+--------------------------------
 
- 1. Produce **Gold** backup from existing Oracle 11g Installation
- 2. Shutdown Tomcat and Oracle services
- 3. Deinstall the existing Oracle 11g Database Software
- 4. Update key Oracle configuration files
- 5. Run the customized Oracle 12c installer script
- 6. Create the new <code>PADATA</code> tablespace
- 7. Run the <code>migrate-tablespace-impdp.sh</code> script
- 8. Double-check all key Oracle configuration files
+These are helper notes for migration from 11g to 12c **[see 11g notes][1]**. Much of the migration is scripted; however, since various systems (such as QA) have drifted over time, many steps are manual so that a sanity check can be performed before continuing on to the next step.
+
+[TOC]
+
+## Produce **Gold** backup from existing Oracle 11g Installation
+
+## Shutdown Tomcat and Oracle services
+
+## Deinstall the existing Oracle 11g Database Software
+
+## Update key Oracle configuration files
+
+## Run the customized Oracle 12c installer script
+
+## Create the new **PADATA** tablespace
+
+## Run the **migrate-tablespace-impdp.sh** script
+
+## Double-check all key Oracle configuration files
+
 
 
   [1]: install-11g.md
