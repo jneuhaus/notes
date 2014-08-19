@@ -19,11 +19,9 @@ must be installed on Red Hat Linux, so they were installed with yum as noted.
     xscreensaver-4.18-5.rhel4.2 (not installed)
     libaio-0.3.104-2            (installed with "yum install libaio")
 
-########################################################################
 Installation of the package "control-center" requires XWindows, which was not
 installed by default for the iWeb server, therefore, installing this package
 required the following packages to also be installed:
-#######################################################################
 
      Package                 Arch       Version          Repository        Size
     =============================================================================
@@ -101,10 +99,8 @@ required the following packages to also be installed:
      xorg-x11-xfs            i386       6.8.2-37.FC4.49.2  updates-released  141 k
      xscreensaver-base       i386       1:4.21-4         base              724 k
 
-################################################################################
 Installation of the package "gnome-libs" required the following prerequisites
 to be intalled:
-################################################################################
 
      Package                 Arch       Version          Repository        Size
     =============================================================================
@@ -119,55 +115,52 @@ to be intalled:
      libpng10                i386       1.0.18-2         base              149 k
      libungif                i386       4.1.3-3.fc4.2    updates-released   39 k
 
-################################################################################
 Installed xorg-x11 package, which is required for the Oracle Installer, and
 this package also required the following:
-################################################################################
- Package                 Arch       Version          Repository        Size
-=============================================================================
-Installing:
- xorg-x11                i386       6.8.2-37.FC4.49.2  updates-released   14 M
-Installing for dependencies:
- fonts-xorg-base         noarch     6.8.2-1          base              7.3 M
- xinitrc                 noarch     4.0.18.1-1       updates-released   28 k
- xorg-x11-xauth          i386       6.8.2-37.FC4.49.2  updates-released  102 k
- xterm                   i386       205-1.FC4        updates-released  175 k
 
-################################################################################
+     Package                 Arch       Version          Repository        Size
+    =============================================================================
+    Installing:
+     xorg-x11                i386       6.8.2-37.FC4.49.2  updates-released   14 M
+    Installing for dependencies:
+     fonts-xorg-base         noarch     6.8.2-1          base              7.3 M
+     xinitrc                 noarch     4.0.18.1-1       updates-released   28 k
+     xorg-x11-xauth          i386       6.8.2-37.FC4.49.2  updates-released  102 k
+     xterm                   i386       205-1.FC4        updates-released  175 k
+
 According to http://www.puschitz.com/InstallingOracle10g.shtml the following
 packages must also be installed for Fedora Core 4.
-################################################################################
- Package                 Arch       Version          Repository        Size
-=============================================================================
-Installing:
- compat-libstdc++-33       i386       3.2.3-47.fc4       base              228 k
- openmotif                 i386       2.2.3-10.FC4.1     updates-released  1.4 M
- xorg-x11-deprecated-libs  i386       6.8.2-37.FC4.49.2  updates-released   88 k
- openmotif21               i386       2.1.30-14          base              996 k
 
-################################################################################
+     Package                 Arch       Version          Repository        Size
+    =============================================================================
+    Installing:
+     compat-libstdc++-33       i386       3.2.3-47.fc4       base              228 k
+     openmotif                 i386       2.2.3-10.FC4.1     updates-released  1.4 M
+     xorg-x11-deprecated-libs  i386       6.8.2-37.FC4.49.2  updates-released   88 k
+     openmotif21               i386       2.1.30-14          base              996 k
+
+
 Updated Kernel parameters by modifying the file /etc/sysctl.conf per Oracle
 installation recommendations.
-################################################################################
-kernel.shmall = 2097152
-kernel.shmmax = 2147483648
-kernel.shmmni = 4096
-kernel.sem = 250 32000 100 128
-fs.file-max = 65536
-net.ipv4.ip_local_port_range = 1024 65000
-rmem_default = 262144
-rmem_max = 262144
-wmem_default = 262144
-wmem_max = 262144
 
-################################################################################
+    kernel.shmall = 2097152
+    kernel.shmmax = 2147483648
+    kernel.shmmni = 4096
+    kernel.sem = 250 32000 100 128
+    fs.file-max = 65536
+    net.ipv4.ip_local_port_range = 1024 65000
+    rmem_default = 262144
+    rmem_max = 262144
+    wmem_default = 262144
+    wmem_max = 262144
+
 Updated the file /etc/security/limits.conf according to Oracle recommendations
 by adding the following lines for the "oracle" user.
-################################################################################
-oracle           soft    nproc   2047
-oracle           hard    nproc   16384
-oracle           soft    nofile  1024
-oracle           hard    nofile  65536
+
+    oracle           soft    nproc   2047
+    oracle           hard    nproc   16384
+    oracle           soft    nofile  1024
+    oracle           hard    nofile  65536
 
 ################################################################################
 After running the Oracle Universal Installer, the following are setup:
