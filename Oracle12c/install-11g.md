@@ -162,52 +162,46 @@ by adding the following lines for the "oracle" user.
     oracle           soft    nofile  1024
     oracle           hard    nofile  65536
 
-################################################################################
 After running the Oracle Universal Installer, the following are setup:
-################################################################################
-iSQL*Plus URL:       http://hd-t3333cl.privatedns.com:5560/isqlplus
-iSQL*Plus DBA URL:   http://hd-t3333cl.privatedns.com:5560/isqlplus/dba
-Enterprise Manager:  http://hd-t3333cl.privatedns.com:1158/em
 
-################################################################################
+    iSQL*Plus URL:       http://hd-t3333cl.privatedns.com:5560/isqlplus
+    iSQL*Plus DBA URL:   http://hd-t3333cl.privatedns.com:5560/isqlplus/dba
+    Enterprise Manager:  http://hd-t3333cl.privatedns.com:1158/em
+
 To Start and Stop the Oracle Web-based Administration servers, as the oracle
 user, execute the following commands:
-################################################################################
-isqlplusctl stop | start
-emctl stop dbconsole | start dbconsole
 
-################################################################################
+    isqlplusctl stop | start
+    emctl stop dbconsole | start dbconsole
+
 Added user accounts to be members of the Oracle groups (/etc/group) so commands
 like sqlplus will work when logged into the system:
-################################################################################
-dba:x:11011:oracle,jboss,elindquist,blane,jkirkwood,sshadmin
-oinstall:x:11012:oracle,jboss,elindquist,blane,jkirkwood,sshadmin
 
-################################################################################
-modified $ORACLE_HOME/sqlplus/admin/glogin.sql (the sqlplus startup script
-added: DEFINE _EDITOR=vi
+    dba:x:11011:oracle,jboss,elindquist,blane,jkirkwood,sshadmin
+    oinstall:x:11012:oracle,jboss,elindquist,blane,jkirkwood,sshadmin
 
-################################################################################
-created PMP and PADOC tablespaces:
-create tablespace pmp datafile '/home/oracle/oracle/product/10.2.0/oradata/orcl/pmp01.dbf' size 2g
-create tablespace pmp datafile '/home/oracle/oracle/product/10.2.0/oradata/orcl/pmp02.dbf' size 2g
-create tablespace padoc datafile '/home/oracle/oracle/product/10.2.0/oradata/orcl/padoc01.dbf' size 100M
+modified $ORACLE_HOME/sqlplus/admin/glogin.sql (the sqlplus startup script and added: DEFINE _EDITOR=vi
 
-################################################################################
-created PMP, PAWEB and PADOC users::
+Created PMP and PADOC tablespaces
 
-create user pmp identified by ** default tablespace pmp temporary tablespace temp quota unlimited on pmp
-create user paweb identified by ** default tablespace pmp temporary tablespace temp quota unlimited on pmp
-create user padoc identified by ** default tablespace padoc temporary tablespace temp quota unlimited on padoc
-grant connect to pmp
-grant connect to paweb
-grant connect to padoc
+    create tablespace pmp datafile '/home/oracle/oracle/product/10.2.0/oradata/orcl/pmp01.dbf' size 2g
+    create tablespace pmp datafile '/home/oracle/oracle/product/10.2.0/oradata/orcl/pmp02.dbf' size 2g
+    create tablespace padoc datafile '/home/oracle/oracle/product/10.2.0/oradata/orcl/padoc01.dbf' size 100M
 
-################################################################################
-created PMPUSER and PSTUSER but did NOT grant connect privilege
-these were "readonly" users that were granted SELECT privileges but not UPDATE
-they need to be created so the import process doesn't show a ton of error messages
-when it tries to grant the privileges:
+Created PMP, PAWEB and PADOC users:
 
-create user pmpuser identified by **
-create user pstuser identified by **
+    create user pmp identified by ** default tablespace pmp temporary tablespace temp quota unlimited on pmp
+    create user paweb identified by ** default tablespace pmp temporary tablespace temp quota unlimited on pmp
+    create user padoc identified by ** default tablespace padoc temporary tablespace temp quota unlimited on padoc
+    grant connect to pmp
+    grant connect to paweb
+    grant connect to padoc
+
+Created PMPUSER and PSTUSER but did NOT grant connect privileges; these were "readonly" users that were granted SELECT privileges but not UPDATE they need to be created so the import process doesn't show a ton of error messages when it tries to grant privileges:
+
+    create user pmpuser identified by **
+    create user pstuser identified by **
+
+
+
+
