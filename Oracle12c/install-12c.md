@@ -39,21 +39,67 @@ Before we install Oracle 12c, we must first completely un-install Oracle 11g.  B
      6. Answer 'yes' to "Do you want to continue?" after CCR check is finished.
      7. Once completed, you will get a message to 'rm -f /etc/oraInst.loc' as root.
      8. Go ahead and 'rm -f /etc/oratab' as well, since this will be re-created.
-          
+
 ## Update key Oracle configuration files
+
+Here are the configuration files that need to be updated to point to the 'new' Oracle Home location:
+
+  * Old Oracle Home: /opt/oracle/product/11.2.0/db_1
+  * New Oracle Home: /opt/oracle/product/12.1.0/db_1
+
+ 1. /etc/init.d/oracle
+ 2. /etc/profile.d/oracle.sh
+ 3. /etc/oratab (this file will be created by new install)
+
+NOTE: Be sure to logout and log back in so the environment variables above are available during the install (next step.)
 
 ## Run the customized Oracle 12c installer script
 
+ 1. Make sure your 'oracle' login shell is in the Oracle 12c binary installation directory (the one with the 'runInstaller' program.)
+ 2. Execute ${HOME}/centos-setup-pa/oracle-setup/07-runInstaller.sh
+    1. Click "Next" confirming you're ignoring software updates.
+    2. Accept to Create and configure a database
+    3. Accept a Server class system
+    4. Accept a Single instance database installation
+    5. Choose "Advanced" install and accept "English" language
+    6. Choose "Standard Edition One"
+    7. Accept ORACLE_BASE=/opt/oracle and ORACLE_HOME=/opt/oracle/product/12.1.0/db_1 values
+    8. Accept Inventory and group names, confirming the Central Inventory is located in ORACLE_BASE
+    9. Accept General Purpose system.
+    10. Accept 'orcl' as SID name, but UNCHECK "Create as Container database"
+    11. Accept Memory, Character Sets, but UNCHECK "Create database with Sample Schemas"
+    12. Accept File system location (/opt/oracle/oradata)
+    13. Do not Register with EM Cloud Control
+    14. Accept Enable Recovery
+    15. Accept and Confirm same password for all accounts.
+    16. Accept all group settings.
+    17. Click Install!
+    18. Execute the following scripts as root:
+        1. /opt/oracle/oraInventory/orainstRoot.sh
+        2. /opt/oracle/product/12.1.0/db_1/root.sh
+    19. Next the "Oracle Configuration Assistant" will begin
+        1. Accept all defaults, click "Close" to exit.
+        2. Edit '/etc/oratab' and change "N" to "Y"
+
 ## Create the new **PADATA** tablespace
 
-## Run the **migrate-tablespace-impdp.sh** script
+  1. Run the following script as the 'oracle' user:
+    1. ${HOME}/centos-setup-pa/oracle-setup/08-modTableSpace.sh
+
+## Run the Oracle Migration Import script (only done once!)
+
+  1. ${HOME}/centos-setup-pa/oracle-maint/migrate-tablespace-impdp.sh
 
 ## Double-check all key Oracle configuration files
+
+  1. /etc/init.d/oracle
+  2. /etc/oratab
+  3. /etc/profile.d/oracle.sh
 
 ## Startup Tomcat and Oracle services
 
  1. So services come back on during boot, as root:
-     2. chkconfig tomcatd on
+     2. chkconfig tomcatd on ; service tomcatd start
      3. chkconfig oracle on
 
   [1]: install-11g.md
