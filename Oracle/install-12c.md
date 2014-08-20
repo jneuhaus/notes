@@ -88,6 +88,8 @@ NOTE: Be sure to logout and log back in so the environment variables above are a
 
 ## Run the Oracle Migration Import script (only done once!)
 
+This migration script is "special" in that it will re-map legacy tablespace names into a new name, **PADATA**, which will now contain all database objects. This will greatly reduce the complexity of maintaining the Oracle Database.
+
   1. ${HOME}/centos-setup-pa/oracle-maint/migrate-tablespace-impdp.sh
 
 ## Double-check all key Oracle configuration files
