@@ -1,13 +1,13 @@
 Notes on Oracle 12c Installation
 --------------------------------
 
-These are helper notes for migration from 11g to 12c **[see 11g notes][1]**. Much of the migration is scripted; however, since various systems (such as QA) have drifted over time, many steps are manual so that a sanity check often needs to be performed before continuing on to the next step.
+These are helper notes for migration from 11g to 12c **[see 11g notes][1]**. Much of the migration is scripted; however, since various systems (such as QA) have drifted over time, many steps are manual so that a sanity check can be performed before continuing on to the next step.
 
 [TOC]
 
 ## Stage Software assets for Oracle 12c Installation
 
-Make sure installer binaries are accessible from the 'oracle' account. As well, we'll be using an Oracle 12c response file located in the 'centos-setup-pa' repository, so make sure that repo is current:
+Make sure the Oracle installer binaries are accessible from the 'oracle' account.  It is a good idea to check the Oracle Support website to see if an PatchSet is available for 12c.  If so, download and install from that.  As well, we'll be using an Oracle 12c response file located in the 'centos-setup-pa' repository, so make sure that repo is current:
 
  1. Login as 'oracle' user
  2. git-pull-all
@@ -42,12 +42,12 @@ Before we install Oracle 12c, we must first completely un-install Oracle 11g.  B
 
 ## Update key Oracle configuration files
 
-Here are the configuration files that need to be updated to point to the 'new' Oracle Home location:
+Here are the configuration files that need to be updated to point to the 'new' Oracle Home location (as 'root'):
 
   * Old Oracle Home: /opt/oracle/product/11.2.0/db_1
   * New Oracle Home: /opt/oracle/product/12.1.0/db_1
 
- 1. /etc/init.d/oracle
+ 1. /etc/init.d/oracle - Run the centos-setup-pa/oracle-setup/04-e-mkInit.sh script to create a new, better version.
  2. /etc/profile.d/oracle.sh
  3. /etc/oratab (this file will be created by new install)
 
