@@ -13,6 +13,8 @@ You can use VMware Player on Windows or Fusion on Mac.  Be sure to set bridged n
 The goal here is to import our backed-up Wordpress database into the turnkey instance.
 
 	* Access ‘phpadmin’ web interface at https://192.168.1.240:12322
+		* Webmin, SSH, MySQL, phpMyAdmin: username root
+		* Wordpress: username admin
 	* Navigate to the ‘wordpress’ database using the GUI
 	* Import ‘wordpress_0.sql’ file from the backup tarball into the ‘wordpress’ database.
 
