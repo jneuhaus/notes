@@ -32,6 +32,7 @@ The goal here is to re-use the turnkey Wordpress configuration after restoring o
 	# cp /var/www/wordpress.orig/wp-config.php /var/www/wordpress/wp-config.php
 	# /etc/init.d/mysql start
 	# /etc/init.d/apache2 start
+	# vi /etc/php5/*/php.ini (set upload_max_filesize to 64M)
 
 ## Install the wp-cli utility ##
 
