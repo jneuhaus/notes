@@ -27,7 +27,7 @@ The goal here is to re-use the turnkey Wordpress configuration after restoring o
 	# cd /var/www
 	# mv wordpress wordpress.orig
 	# mv ~/backedupsite wordpress
-	# chown -R nobody:nogroup wordpress
+	# chown -R www-data:www-data wordpress
 	# cp /var/www/wordpress/wp-config.php /var/www/wordpress/wp-config.php.backup
 	# cp /var/www/wordpress.orig/wp-config.php /var/www/wordpress/wp-config.php
 	# /etc/init.d/mysql start
