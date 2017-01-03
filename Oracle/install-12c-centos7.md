@@ -31,8 +31,8 @@ Perform the following modifications:
     LINK=$(FORT_CMD) $(PURECMDS) $(ORALD) $(LDFLAGS) $(COMPSOBJS)
     LINK32=$(FORT_CMD) $(PURECMDS) $(ORALD) $(LDFLAGS32) $(COMPSOBJS)
     # TO  :
-    LINK=$(FORT_CMD) $(PURECMDS) $(ORALD) $(LDFLAGS) $(COMPSOBJS) -Wl,--no-as-needed
-    LINK32=$(FORT_CMD) $(PURECMDS) $(ORALD) $(LDFLAGS32) $(COMPSOBJS) -Wl,--no-as-needed
+    LINK=$(FORT_CMD) $(PURECMDS) $(ORALD) $(LDFLAGS) $(COMPSOBJS) --no-as-needed
+    LINK32=$(FORT_CMD) $(PURECMDS) $(ORALD) $(LDFLAGS32) $(COMPSOBJS) --no-as-needed
     # Line 3041-3042
     # FROM:
     TG4PWD_LINKLINE= $(LINK) $(OPT) $(TG4PWDMAI) \
