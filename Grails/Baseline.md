@@ -86,7 +86,7 @@ environments:
             driverClassName: org.postgresql.Driver
             url: jdbc:postgresql://localhost:5432/eimpound
             username: eimpound
-            password: letmein123</b>
+            password: ********</b>
             properties:
                 jmxEnabled: true
                 ...</code>
