@@ -17,6 +17,7 @@ The goal here is to import our backed-up Wordpress database into the turnkey ins
 		* Wordpress: username admin
 	* Navigate to the ‘wordpress’ database using the GUI
 	* Import ‘wordpress_0.sql’ file from the backup tarball into the ‘wordpress’ database.
+        * Locate the `options` table and update the `siteurl` and `home` values with local values
 
 ## Operations to perform as ‘root’ ##
 
